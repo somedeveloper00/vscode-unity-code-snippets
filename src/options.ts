@@ -19,14 +19,19 @@ function parseReplaces(conf: vscode.WorkspaceConfiguration): Replaces {
 	const style = conf.get('style') as IndentationStyle;
 	const usePrivateKeyword = conf.get('usePrivateKeyword') as boolean;
 	const classAccessibilityLevelKeyword = conf.get('classAccessibilityLevel') as ClassAccessibilityLevel;
+	const useSealedClassesKeyword = conf.get('useSealedClasses') as boolean;
 
 	const replaces: Replaces = {} as any;
 
 	// private keyword
 	replaces.PRIVATE = usePrivateKeyword ? 'private ' : '';
 
-	// class accessibility level
-	replaces.CLASS_ACCESSIBILITY_LEVEL = classAccessibilityLevelKeyword === 'none' ? '' : `${classAccessibilityLevelKeyword} `;
+	replaces.CLASS_DECLERATION =
+		// class accessibility level
+		(classAccessibilityLevelKeyword === 'none' ? '' : `${classAccessibilityLevelKeyword} `) +
+		// sealed keyword
+		(useSealedClassesKeyword ? 'sealed ' : '') +
+		'class';
 
 	// indentation style
 	if (style === 'allman') {
