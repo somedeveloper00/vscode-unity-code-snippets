@@ -6,6 +6,8 @@ Create Unity classes and methods easily.
 ![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/kleber-swf.unity-code-snippets?color=blue&style=for-the-badge)
 ![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/kleber-swf.unity-code-snippets?color=orange&style=for-the-badge)
 
+> This is a fork of the [original repository](https://github.com/kleber-swf/vscode-unity-code-snippets) with added features like `sealed` classes and various accessibility modifiers for the snippets.
+
 ## Features
 
 > **2.0.0**: Support to style configuration. Now you can use [K&R](https://en.wikipedia.org/wiki/Indentation_style#K&R_style) and [Allman (C#/Unity default)](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) styles! More at [Configuration](#configuration) section.
